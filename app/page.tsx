@@ -1,102 +1,86 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="font-sans min-h-screen flex flex-col justify-between bg-gradient-to-br from-gray-900 via-gray-800 to-black text-gray-100">
+      <main className="flex flex-col gap-10 items-center p-10">
+        {/* Judul */}
+        <h1 className="text-center text-5xl font-extrabold tracking-wide drop-shadow-lg bg-gradient-to-r from-red-500 via-pink-400 to-yellow-400 text-transparent bg-clip-text">
+          🚘 Galeri Mobil Galll 🚗
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+        {/* Deskripsi */}
+        <p className="text-center text-gray-300 max-w-2xl leading-relaxed">
+          Halo nama saya <span className="font-semibold text-red-400">Galih Ardy Pratama</span>.  
+          Ini <span className="text-yellow-400">website</span> sederhana yang saya edit sendiri.
+        </p>
+
+        {/* Card Mobil */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-6">
+          <div className="bg-gray-900 rounded-2xl shadow-lg hover:shadow-red-500/40 transition duration-300 transform hover:-translate-y-2 p-6 flex flex-col items-center border border-gray-700">
+            <img
+              src="https://www.wallpaperbetter.com/wallpaper/823/337/175/mitsubishi-lancer-evolution-9-1080P-wallpaper.jpg"
+              alt="evolution 9"
+              className="rounded-lg object-cover w-[600px] h-[210px]"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <h2 className="mt-4 text-xl font-bold text-white">Evolution 9</h2>
+            <p className="text-gray-400 text-sm">⚡ Kecepatan tinggi dengan desain elegan.</p>
+          </div>
+
+          <div className="bg-gray-900 rounded-2xl shadow-lg hover:shadow-yellow-400/40 transition duration-300 transform hover:-translate-y-2 p-6 flex flex-col items-center border border-gray-700">
+            <img
+              src="https://i.pinimg.com/originals/55/3b/08/553b08ac7cf2f0c1d6488881f2d90424.jpg"
+              alt="city z"
+              className="rounded-lg object-cover w-[400px] h-[300px]"
+            />
+            <h2 className="mt-4 text-xl font-bold text-white">City Z</h2>
+            <p className="text-gray-400 text-sm">✨ Nyaman, stylish, dan cocok buat nongki.</p>
+          </div>
+
+          <div className="bg-gray-900 rounded-2xl shadow-lg hover:shadow-blue-400/40 transition duration-300 transform hover:-translate-y-2 p-6 flex flex-col items-center border border-gray-700">
+            <img
+              src="https://nmaa.co.id/wp-content/uploads/2022/01/Honda-Accord-Ferio-1997-Reinaldi-BDG-4-e1642911829158.jpg"
+              alt="civic ferio"
+              className="rounded-lg object-cover w-[600px] h-[210px]"
+            />
+            <h2 className="mt-4 text-xl font-bold text-white">Civic Ferio</h2>
+            <p className="text-gray-400 text-sm">🔥 Ikonik, nyaman, dan kesukaan ciwi".</p>
+          </div>
+
+          <div className="bg-gray-900 rounded-2xl shadow-lg hover:shadow-blue-400/40 transition duration-300 transform hover:-translate-y-2 p-6 flex flex-col items-center border border-gray-700">
+            <img
+              src="https://bringatrailer.com/wp-content/uploads/2022/07/1997_toyota_land-cruiser-fzj80_landcruiser-9-33887.jpg"
+              alt="VX 80"
+              className="rounded-lg object-cover w-[300px] h-[220px]"
+            />
+            <h2 className="mt-4 text-xl font-bold text-white">VX 80</h2>
+            <p className="text-gray-400 text-sm">🔥 Idaman bapak", auto dilirik calon mertua.</p>
+          </div>
+
+          <div className="bg-gray-900 rounded-2xl shadow-lg hover:shadow-red-500/40 transition duration-300 transform hover:-translate-y-2 p-6 flex flex-col items-center border border-gray-700">
+            <img
+              src="https://img-ik.cars.co.za/images/2019/3/Suzuki%20Ertiga/tr:n-news_1200x/Suzuki_Ertiga-117.jpg"
+              alt="All New Ertiga Hybird"
+              className="rounded-lg object-cover w-[370px] h-[210px]"
+            />
+            <h2 className="mt-4 text-xl font-bold text-white">All New Ertiga Hybrid</h2>
+            <p className="text-gray-400 text-sm">⚡ Salah satu mobil mpv keluarga paling nyaman.</p>
+          </div>
+
+          <div className="bg-gray-900 rounded-2xl shadow-lg hover:shadow-yellow-400/40 transition duration-300 transform hover:-translate-y-2 p-6 flex flex-col items-center border border-gray-700">
+            <img
+              src="https://wallpaperbat.com/img/146634874-suzuki-jimny.jpg"
+              alt="Jimny JB74"
+              className="rounded-lg object-cover w-[350px] h-[240px]"
+            />
+            <h2 className="mt-4 text-xl font-bold text-white">Jimny JB74</h2>
+            <p className="text-gray-400 text-sm">✨ Cocok buat bahan trabas dan ganteng.</p>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="bg-gray-950 text-gray-400 py-4 flex justify-center border-t border-gray-700">
+        <p className="text-sm">
+          © 2025 <span className="text-red-400 font-semibold">Galeri Mobil Galll</span> - Semua hak dilindungi 🚘
+        </p>
       </footer>
     </div>
   );
